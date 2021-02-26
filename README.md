@@ -1,4 +1,4 @@
-# Project 3 - *Chirper *
+# Project 3 - Chirper 
 
 **Chirper** is a basic twitter app to read your tweets.
 
