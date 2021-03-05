@@ -21,14 +21,24 @@ class TweetTableViewCell: UITableViewCell {
         // Initialization code
     }
     var favorited:Bool = false
+    var retweeted:Bool = false
     var tweetID:Int = -1
     
     func setFavorite( isFavorited:Bool){
         favorited = isFavorited
         if (favorited){
-            favButton.setImage(UIImage(named: "favor_icon_red"), for: UIControl.State.normal)
+            favButton.setImage(UIImage(named: "favor-icon-red"), for: UIControl.State.normal)
         } else{
-            favButton.setImage(UIImage(named: "favor_icon"), for: UIControl.State.normal)
+            favButton.setImage(UIImage(named: "favor-icon"), for: UIControl.State.normal)
+        }
+    }
+    func setRetweeted( isRetweeted:Bool){
+        if (isRetweeted){
+            retweetButton.setImage(UIImage(named: "retweet-icon-green"), for: UIControl.State.normal)
+            retweetButton.isEnabled = false
+        } else{
+            retweetButton.setImage(UIImage(named: "retweet-icon"), for: UIControl.State.normal)
+            retweetButton.isEnabled = false
         }
     }
     
@@ -52,6 +62,11 @@ class TweetTableViewCell: UITableViewCell {
     
     
     @IBAction func retweetTweet(_ sender: Any) {
+        TwitterAPICaller.client?.retweetTweet(tweetID: tweetID, success: {
+            self.setRetweeted(isRetweeted: true)
+        }, failure: { (error) in
+            print("Error in retweeting: \(error)")
+        })
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -12,7 +12,7 @@
         <!--LoginViewController-->
         <scene sceneID="Og5-wi-GIu">
             <objects>
-                <viewController title="LoginViewController" id="L0T-ts-dTz" customClass="LoginViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="LoginViewController" modalPresentationStyle="fullScreen" id="L0T-ts-dTz" customClass="LoginViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bE4-u0-HlV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,9 +53,9 @@
         <!--Home-->
         <scene sceneID="Xlt-pg-8Ok">
             <objects>
-                <tableViewController id="fbo-XN-Fud" customClass="HomeTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="fbo-XN-Fud" customClass="HomeTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="chk-kc-Z2l">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -96,7 +96,7 @@
                                                 <constraint firstAttribute="height" constant="30" id="O94-oc-MyQ"/>
                                                 <constraint firstAttribute="width" constant="30" id="OJ9-Qh-Yk3"/>
                                             </constraints>
-                                            <state key="normal" title="likeButton" image="favor-icon"/>
+                                            <state key="normal" image="favor-icon"/>
                                             <connections>
                                                 <action selector="favoriteTweet:" destination="Tv3-j5-XJf" eventType="touchUpInside" id="8KZ-Ab-fWQ"/>
                                             </connections>
@@ -165,13 +165,13 @@
         <!--Tweet View Controller-->
         <scene sceneID="eFR-Fv-5Tp">
             <objects>
-                <viewController id="hRg-3O-ym4" customClass="TweetViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="hRg-3O-ym4" customClass="TweetViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kMj-zs-fQn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ssw-ES-yin">
-                                <rect key="frame" x="0.0" y="56" width="375" height="135"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="167"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -212,9 +212,9 @@
         <!--Navigation Controller-->
         <scene sceneID="GB2-xd-zTz">
             <objects>
-                <navigationController id="tXr-Cv-V4P" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="tXr-Cv-V4P" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="g7E-x8-bgV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -233,10 +233,10 @@
         <!--Tweet Navigation Controller-->
         <scene sceneID="Fq3-Fc-3sS">
             <objects>
-                <navigationController title="Tweet Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="cWI-YD-mdR" sceneMemberID="viewController">
+                <navigationController title="Tweet Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="cWI-YD-mdR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="f5d-As-8i9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>

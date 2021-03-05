@@ -36,10 +36,8 @@ class HomeTableViewController: UITableViewController {
             for tweet in tweets{
                 self.tweetArray.append(tweet)
             }
-            
             self.tableView.reloadData()
             self.myRefreshControl.endRefreshing()
-            
         }, failure: { (Error) in
             print("Could not retrieve tweets.")
         })
@@ -69,7 +67,8 @@ class HomeTableViewController: UITableViewController {
         }
         
        cell.setFavorite(isFavorited: tweetArray[indexPath.row]["favorited"] as! Bool)
-        cell.tweetID = tweetArray[indexPath.row]["id"] as! Int
+       
+       cell.tweetID = tweetArray[indexPath.row]["id"] as! Int
         
         return cell
     }
